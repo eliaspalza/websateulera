@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despacho de Medicina estética de la Dra. Inés Herráez Balanzat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+    body {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: #f8f8f8;
+        color: #1a1a1a;
+    }
+    .text-gold { color: #b8860b; }
+    .bg-gold { background-color: #b8860b; }
+    .border-gold { border-color: #b8860b; }
+    .transition-all {
+        transition-property: all;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+    <a href="#" class="text-2xl font-bold text-gold tracking-widest uppercase">
+      DRA. INÉS HERRÁEZ BALANZAT
+    </a>
+
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-gold focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="hidden md:flex items-center space-x-8 text-lg">
+      <li><a href="#about" class="text-gray-600 hover:text-gold transition-all">Sobre Nosotros</a></li>
+      <li class="relative group">
+        <button id="treatments-dropdown" class="text-gray-600 hover:text-gold transition-all flex items-center">
+          Tratamientos
+          <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="treatments-menu"
+             class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded-md border border-gray-200 min-w-[200px] z-20">
+          <a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Faciales</a>
+          <a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Corporales</a>
+          <a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Láser y Tecnología</a>
+        </div>
+      </li>
+      <li><a href="#services" class="text-gray-600 hover:text-gold transition-all">Servicios</a></li>
+      <li><a href="#contact" class="text-gray-600 hover:text-gold transition-all">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden">
+    <ul class="flex flex-col items-center py-4 space-y-4 text-lg">
+      <li><a href="#about" class="text-gray-600 hover:text-gold transition-all">Sobre Nosotros</a></li>
+      <li class="w-full relative">
+        <button id="mobile-treatments-button"
+                class="w-full text-center text-gray-600 hover:text-gold transition-all flex items-center justify-center">
+          Tratamientos
+          <svg class="ml-2 w-4 h-4 transition-transform transform"
+               fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="mobile-treatments-menu" class="hidden bg-white mt-2 py-2 w-full text-center">
+          <a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Faciales</a>
+          <a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Corporales</a>
+          <a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all">Láser y Tecnología</a>
+        </div>
+      </li>
+      <li><a href="#services" class="text-gray-600 hover:text-gold transition-all">Servicios</a></li>
+      <li><a href="#contact" class="text-gray-600 hover:text-gold transition-all">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="flex-grow">
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-gray-100">
+    <div class="absolute text-gold opacity-50 text-[30vw] md:text-[25vw] font-bold z-0 pointer-events-none">IH</div>
+    <div class="text-center p-8 bg-white/70 backdrop-blur-sm rounded-lg shadow-xl z-10">
+      <h1 class="text-5xl md:text-7xl font-bold text-gold tracking-wider">Despacho de Medicina Estética</h1>
+      <h2 class="text-2xl md:text-4xl mt-2 md:mt-4 text-gray-700">Dra. Inés Herráez Balanzat</h2>
+      <p class="mt-4 text-gray-600 text-lg max-w-xl mx-auto">Implementa tu belleza natural en Sa Teulera</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto px-6 py-12 md:py-24">
+    <div class="flex flex-col md:flex-row items-center md:space-x-12">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="https://canvas.replit.com/content/uploaded/IMG_7042.jpg-8d3530bb-d0fd-4976-9eeb-0e7e91ec2207"
+             alt="Foto de la Dra. Inés Herráez Balanzat" class="rounded-lg shadow-lg w-full h-auto">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-bold text-gold mb-4 border-b-2 border-gold pb-2">Sobre Nosotros</h2>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          En el despacho de la Dra. Inés Herráez Balanzat, la belleza es el resultado de un cuidado médico integral.
+          Situados en el centro comercial de Sa Teulera, ofrecemos un entorno seguro y profesional donde médicos especializados te guiarán.
+          Nos enorgullece utilizar las técnicas más avanzadas y productos de vanguardia para garantizar resultados naturales y duraderos.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-6 text-center">
+    <p>&copy; 2024 IH Despacho de Medicina estética de la Dra. Inés Herráez Balanzat. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const treatmentsDropdown = document.getElementById('treatments-dropdown');
+  const treatmentsMenu = document.getElementById('treatments-menu');
+  const mobileTreatmentsButton = document.getElementById('mobile-treatments-button');
+  const mobileTreatmentsMenu = document.getElementById('mobile-treatments-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  treatmentsDropdown.addEventListener('click', (event) => {
+    treatmentsMenu.classList.toggle('hidden');
+    event.stopPropagation();
+  });
+
+  mobileTreatmentsButton.addEventListener('click', () => {
+    mobileTreatmentsMenu.classList.toggle('hidden');
+  });
+
+  document.body.addEventListener('click', (event) => {
+    if (!treatmentsDropdown.contains(event.target) && !treatmentsMenu.contains(event.target)) {
+      treatmentsMenu.classList.add('hidden');
+    }
+  });
+</script>
+</body>
+</html>
