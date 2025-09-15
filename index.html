@@ -1,492 +1,654 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despacho de Medicina Estética de la Dra. Inés Herráez Balanzat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Estilos de la pantalla de bienvenida */
+        .image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .image-container.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Estilos del contenido principal de la web */
+        .website-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+            transition-delay: 0.5s;
+        }
+        .website-content.fade-in {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Estilos del sitio web */
+        .text-gold {
+            color: #b8860b;
+        }
+        .bg-gold {
+            background-color: #b8860b;
+        }
+        .border-gold {
+            border-color: #b8860b;
+        }
+        .transition-all {
+            transition-property: all;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+        .text-hero-ih {
+            font-size: 35vw;
+            opacity: 0.5;
+            font-family: 'Playfair Display', serif;
+        }
+        @media (max-width: 767px) {
+            .text-hero-ih {
+                font-size: 80vw; /* Aumento del 80% para móviles */
+                opacity: 1.0;
+            }
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Despacho de Medicina estética de la Dra. Inés Herráez Balanzat&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&amp;display=swap');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Cormorant Garamond', serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f8f8f8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #1a1a1a;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.text-gold {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #b8860b;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bg-gold {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #b8860b;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.border-gold {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #b8860b;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.transition-all {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition-property: all;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition-duration: 300ms;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition-timing-function: ease-in-out;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="flex flex-col min-h-screen"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navbar and Header --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-white shadow-sm sticky top-0 z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="text-2xl font-bold text-gold tracking-widest uppercase hover:scale-105 transition-transform" data-i18n="navbar_brand"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>DRA. INÉS HERRÁEZ BALANZAT</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Mobile menu button --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="md:hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="mobile-menu-button" class="text-gold focus:outline-none"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Desktop Menu --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="hidden md:flex items-center space-x-8 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#about" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_about"&gt;Sobre Nosotros&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="relative group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="treatments-dropdown" class="text-gray-600 hover:text-gold hover:scale-105 transition-all flex items-center" data-i18n="navbar_treatments"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Tratamientos</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Dropdown content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="treatments-menu" class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded-md border border-gray-200 min-w-[200px] z-20"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_facials"&gt;Faciales&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_body"&gt;Corporales&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_laser"&gt;Láser y Tecnología&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#services" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_services"&gt;Servicios&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_contact"&gt;Contacto&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="relative group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="language-dropdown" class="text-gray-600 hover:text-gold transition-all flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/&gt;&lt;path d="M4.93 4.93l1.41 1.41m12.72 12.72l1.41 1.41M12 2v20m-5-5l10-10m-10 0l10 10m-1-16h-4m-6 0h-4m12 16h4m-6 0h-4"/&gt;&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span id="current-lang" class="ml-2"&gt;ES&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="language-menu" class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded-md border border-gray-200 min-w-[100px] z-20"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="es"&gt;Español&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="en"&gt;English&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="de"&gt;Deutsch&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="ca"&gt;Català&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Mobile Menu (initially hidden) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="mobile-menu" class="hidden md:hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="flex flex-col items-center py-4 space-y-4 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#about" class="text-gray-600 hover:text-gold transition-all" data-i18n="navbar_about"&gt;Sobre Nosotros&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="w-full relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="mobile-treatments-button" class="w-full text-center text-gray-600 hover:text-gold transition-all flex items-center justify-center" data-i18n="navbar_treatments"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Tratamientos</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Mobile Dropdown content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="mobile-treatments-menu" class="hidden bg-white mt-2 py-2 w-full text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_facials"&gt;Faciales&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_body"&gt;Corporales&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_laser"&gt;Láser y Tecnología&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#services" class="text-gray-600 hover:text-gold transition-all" data-i18n="navbar_services"&gt;Servicios&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact" class="text-gray-600 hover:text-gold transition-all" data-i18n="navbar_contact"&gt;Contacto&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="relative w-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="mobile-language-button" class="w-full text-center text-gray-600 hover:text-gold transition-all flex items-center justify-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/&gt;&lt;path d="M4.93 4.93l1.41 1.41m12.72 12.72l1.41 1.41M12 2v20m-5-5l10-10m-10 0l10 10m-1-16h-4m-6 0h-4m12 16h4m-6 0h-4"/&gt;&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span id="mobile-current-lang" class="ml-2"&gt;ES&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="mobile-language-menu" class="hidden bg-white mt-2 py-2 w-full text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="es"&gt;Español&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="en"&gt;English&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="de"&gt;Deutsch&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="ca"&gt;Català&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="flex-grow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Hero Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-gray-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Background Text --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute text-gold opacity-50 text-[30vw] md:text-[25vw] font-bold z-0 pointer-events-none"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>IH</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Hero content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center p-8 bg-white/70 backdrop-blur-md rounded-lg shadow-xl z-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-5xl md:text-7xl font-bold text-gold tracking-wider" data-i18n="hero_title"&gt;Despacho de Medicina Estética&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl md:text-4xl mt-2 md:mt-4 text-gray-700" data-i18n="hero_subtitle"&gt;Dra. Inés Herráez Balanzat&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mt-4 text-gray-600 text-lg max-w-xl mx-auto" data-i18n="hero_slogan"&gt;Implementa tu belleza natural en Sa Teulera&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- About Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="about" class="container mx-auto px-6 py-16 md:py-32"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row items-center md:space-x-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 mb-8 md:mb-0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://canvas.replit.com/content/uploaded/IMG_7042.jpg-8d3530bb-d0fd-4976-9eeb-0e7e91ec2207" alt="Foto de la Dra. Inés Herráez Balanzat" class="rounded-lg shadow-2xl w-full h-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-gold mb-4 border-b-2 border-gold pb-2" data-i18n="about_title"&gt;Sobre Nosotros&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 leading-relaxed text-lg" data-i18n="about_text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>En el despacho de la Dra. Inés Herráez Balanzat, la belleza es el resultado de un cuidado médico integral. Situados en el centro comercial de Sa Teulera, ofrecemos un entorno seguro y profesional donde médicos especializados te guiarán en tu camino hacia la mejor versión de ti mismo/a. Nos enorgullece utilizar las técnicas más avanzadas y productos de vanguardia para garantizar resultados naturales y duraderos.</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Treatments Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="treatments" class="bg-gray-100 py-16 md:py-32"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="container mx-auto px-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-16 border-b-2 border-gold pb-2 mx-auto w-fit" data-i18n="treatments_main_title"&gt;Nuestros Tratamientos&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Facial Treatments --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="faciales" class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:scale-105 transition-all"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_facials"&gt;Faciales&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-3 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="facial_botox"&gt;Toxina Botulínica (Botox)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="facial_fillers"&gt;Rellenos de Ácido Hialurónico&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="facial_threads"&gt;Hilos Tensores&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="facial_peeling"&gt;Peeling Químico Médico&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="facial_mesotherapy"&gt;Mesoterapia Facial&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Body Treatments --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="corporales" class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:scale-105 transition-all"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_body"&gt;Corporales&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-3 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="body_mesotherapy"&gt;Mesoterapia Corporal&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="body_cavitation"&gt;Cavitación y Radiofrecuencia&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="body_veins"&gt;Eliminación de Varices&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="body_hyperhidrosis"&gt;Tratamientos de Hiperhidrosis&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Laser &amp; Technology --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="laser" class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:scale-105 transition-all"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_laser"&gt;Láser y Tecnología&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-3 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="laser_hair_removal"&gt;Depilación Láser de Diodo&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="laser_rejuvenation"&gt;Rejuvenecimiento Cutáneo Láser&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="laser_spots"&gt;Eliminación de Manchas y Tatuajes&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li data-i18n="laser_acne"&gt;Tratamiento de Cicatrices de Acné&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Contact Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="contact" class="container mx-auto px-6 py-16 md:py-32"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-12 border-b-2 border-gold pb-2 mx-auto w-fit" data-i18n="contact_title"&gt;Contáctanos&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row justify-center items-center md:space-x-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-lg mb-4" data-i18n="contact_text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Estamos ubicados en el Centro Comercial de Sa Teulera.</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>¡Esperamos verte pronto!</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-lg font-bold" data-i18n="contact_phone_label"&gt;Teléfono: +34 123 456 789&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-700 text-lg font-bold" data-i18n="contact_email_label"&gt;Email: info@draherraez.com&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="md:w-1/2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;form class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" data-i18n-placeholder="contact_name_placeholder" placeholder="Nombre" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="email" data-i18n-placeholder="contact_email_placeholder" placeholder="Correo Electrónico" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea data-i18n-placeholder="contact_message_placeholder" placeholder="Mensaje" rows="4" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all"&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="submit" class="w-full bg-gold text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all" data-i18n="contact_button"&gt;Enviar Mensaje&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-gray-800 text-white py-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p data-i18n="footer_text"&gt;&amp;copy; 2024 IH Despacho de Medicina estética de la Dra. Inés Herráez Balanzat. Todos los derechos reservados.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenuButton = document.getElementById('mobile-menu-button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenu = document.getElementById('mobile-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const treatmentsDropdown = document.getElementById('treatments-dropdown');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const treatmentsMenu = document.getElementById('treatments-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileTreatmentsButton = document.getElementById('mobile-treatments-button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileTreatmentsMenu = document.getElementById('mobile-treatments-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const langDropdown = document.getElementById('language-dropdown');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const langMenu = document.getElementById('language-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileLangButton = document.getElementById('mobile-language-button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileLangMenu = document.getElementById('mobile-language-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const currentLangSpan = document.getElementById('current-lang');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileCurrentLangSpan = document.getElementById('mobile-current-lang');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Toggle mobile menu</p>
-<p class="p1"><span class="Apple-converted-space">        </span>mobileMenuButton.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mobileMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Toggle desktop treatments dropdown</p>
-<p class="p1"><span class="Apple-converted-space">        </span>treatmentsDropdown.addEventListener('click', (event) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>treatmentsMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>event.stopPropagation(); // Prevent the body click listener from firing immediately</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Toggle mobile treatments dropdown</p>
-<p class="p1"><span class="Apple-converted-space">        </span>mobileTreatmentsButton.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mobileTreatmentsMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Toggle language dropdowns</p>
-<p class="p1"><span class="Apple-converted-space">        </span>langDropdown.addEventListener('click', (event) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>langMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>event.stopPropagation();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>mobileLangButton.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mobileLangMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Language content</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const translations = {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>es: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Despacho de Medicina estética de la Dra. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_brand: 'DRA. INÉS HERRÁEZ BALANZAT',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_about: 'Sobre Nosotros',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_treatments: 'Tratamientos',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_services: 'Servicios',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_contact: 'Contacto',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_title: 'Despacho de Medicina Estética',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_subtitle: 'Dra. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_slogan: 'Implementa tu belleza natural en Sa Teulera',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_title: 'Sobre Nosotros',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_text: 'En el despacho de la Dra. Inés Herráez Balanzat, la belleza es el resultado de un cuidado médico integral. Situados en el centro comercial de Sa Teulera, ofrecemos un entorno seguro y profesional donde médicos especializados te guiarán en tu camino hacia la mejor versión de ti mismo/a. Nos enorgullece utilizar las técnicas más avanzadas y productos de vanguardia para garantizar resultados naturales y duraderos.',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_main_title: 'Nuestros Tratamientos',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_facials: 'Faciales',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_body: 'Corporales',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_laser: 'Láser y Tecnología',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_botox: 'Toxina Botulínica (Botox)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_fillers: 'Rellenos de Ácido Hialurónico',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_threads: 'Hilos Tensores',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_peeling: 'Peeling Químico Médico',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_mesotherapy: 'Mesoterapia Facial',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_mesotherapy: 'Mesoterapia Corporal',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_cavitation: 'Cavitación y Radiofrecuencia',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_veins: 'Eliminación de Varices',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_hyperhidrosis: 'Tratamientos de Hiperhidrosis',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_hair_removal: 'Depilación Láser de Diodo',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_rejuvenation: 'Rejuvenecimiento Cutáneo Láser',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_spots: 'Eliminación de Manchas y Tatuajes',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_acne: 'Tratamiento de Cicatrices de Acné',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_title: 'Contáctanos',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_text: 'Estamos ubicados en el Centro Comercial de Sa Teulera. ¡Esperamos verte pronto!',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_phone_label: 'Teléfono: +34 123 456 789',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_label: 'Email: info@draherraez.com',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_name_placeholder: 'Nombre',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_placeholder: 'Correo Electrónico',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_message_placeholder: 'Mensaje',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_button: 'Enviar Mensaje',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>footer_text: '&amp;copy; 2024 IH Despacho de Medicina estética de la Dra. Inés Herráez Balanzat. Todos los derechos reservados.'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>en: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Aesthetic Medicine Clinic of Dr. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_brand: 'DR. INÉS HERRÁEZ BALANZAT',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_about: 'About Us',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_treatments: 'Treatments',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_services: 'Services',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_contact: 'Contact',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_title: 'Aesthetic Medicine Clinic',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_subtitle: 'Dr. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_slogan: 'Enhance your natural beauty in Sa Teulera',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_title: 'About Us',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_text: 'At the clinic of Dr. Inés Herráez Balanzat, beauty is the result of a comprehensive medical approach. Located in the Sa Teulera shopping center, we offer a safe and professional environment where specialized doctors will guide you on your journey to the best version of yourself. We are proud to use the most advanced techniques and cutting-edge products to guarantee natural and lasting results.',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_main_title: 'Our Treatments',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_facials: 'Facials',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_body: 'Body',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_laser: 'Laser &amp; Technology',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_botox: 'Botulinum Toxin (Botox)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_fillers: 'Hyaluronic Acid Fillers',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_threads: 'Tension Threads',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_peeling: 'Medical Chemical Peel',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_mesotherapy: 'Facial Mesotherapy',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_mesotherapy: 'Body Mesotherapy',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_cavitation: 'Cavitation and Radiofrequency',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_veins: 'Vein Removal',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_hyperhidrosis: 'Hyperhidrosis Treatments',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_hair_removal: 'Diode Laser Hair Removal',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_rejuvenation: 'Laser Skin Rejuvenation',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_spots: 'Removal of Spots and Tattoos',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_acne: 'Acne Scar Treatment',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_title: 'Contact Us',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_text: 'We are located at the Sa Teulera Shopping Center. We look forward to seeing you soon!',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_phone_label: 'Phone: +34 123 456 789',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_label: 'Email: info@draherraez.com',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_name_placeholder: 'Name',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_placeholder: 'Email',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_message_placeholder: 'Message',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_button: 'Send Message',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>footer_text: '&amp;copy; 2024 IH Aesthetic Medicine Clinic of Dr. Inés Herráez Balanzat. All rights reserved.'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>de: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Praxis für Ästhetische Medizin von Dr. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_brand: 'DR. INÉS HERRÁEZ BALANZAT',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_about: 'Über Uns',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_treatments: 'Behandlungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_services: 'Dienstleistungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_contact: 'Kontakt',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_title: 'Praxis für Ästhetische Medizin',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_subtitle: 'Dr. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_slogan: 'Entfalte deine natürliche Schönheit in Sa Teulera',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_title: 'Über Uns',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_text: 'In der Praxis von Dr. Inés Herráez Balanzat ist Schönheit das Ergebnis einer ganzheitlichen medizinischen Betreuung. Im Einkaufszentrum Sa Teulera gelegen, bieten wir ein sicheres und professionelles Umfeld, in dem Sie von spezialisierten Ärzten auf dem Weg zur besten Version Ihrer selbst begleitet werden. Wir sind stolz darauf, die fortschrittlichsten Techniken und modernste Produkte einzusetzen, um natürliche und dauerhafte Ergebnisse zu garantieren.',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_main_title: 'Unsere Behandlungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_facials: 'Gesichtsbehandlungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_body: 'Körperbehandlungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_laser: 'Laser &amp; Technologie',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_botox: 'Botulinumtoxin (Botox)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_fillers: 'Hyaluronsäure-Füllstoffe',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_threads: 'Fadenlifting',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_peeling: 'Medizinisches chemisches Peeling',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_mesotherapy: 'Gesichtsmesotherapie',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_mesotherapy: 'Körpermesotherapie',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_cavitation: 'Kavitation und Radiofrequenz',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_veins: 'Entfernung von Krampfadern',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_hyperhidrosis: 'Hyperhidrose-Behandlungen',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_hair_removal: 'Diodenlaser-Haarentfernung',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_rejuvenation: 'Laser-Hautverjüngung',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_spots: 'Entfernung von Flecken und Tattoos',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_acne: 'Behandlung von Aknenarben',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_title: 'Kontakt',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_text: 'Wir befinden uns im Einkaufszentrum Sa Teulera. Wir freuen uns darauf, Sie bald zu sehen!',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_phone_label: 'Telefon: +34 123 456 789',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_label: 'E-Mail: info@draherraez.com',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_name_placeholder: 'Name',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_placeholder: 'E-Mail',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_message_placeholder: 'Nachricht',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_button: 'Nachricht senden',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>footer_text: '&amp;copy; 2024 IH Praxis für Ästhetische Medizin von Dr. Inés Herráez Balanzat. Alle Rechte vorbehalten.'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>ca: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: 'Despatx de Medicina Estètica de la Dra. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_brand: 'DRA. INÉS HERRÁEZ BALANZAT',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_about: 'Sobre Nosaltres',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_treatments: 'Tractaments',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_services: 'Serveis',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navbar_contact: 'Contacte',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_title: 'Despatx de Medicina Estètica',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_subtitle: 'Dra. Inés Herráez Balanzat',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>hero_slogan: 'Implementa la teva bellesa natural a Sa Teulera',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_title: 'Sobre Nosaltres',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>about_text: 'Al despatx de la Dra. Inés Herráez Balanzat, la bellesa és el resultat d\'una cura mèdica integral. Situats al centre comercial de Sa Teulera, oferim un entorn segur i professional on metges especialitzats et guiaran en el teu camí cap a la millor versió de tu mateix/a. Ens enorgulleix utilitzar les tècniques més avançades i productes d\'avantguarda per garantir resultats naturals i duradors.',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_main_title: 'Els Nostres Tractaments',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_facials: 'Facials',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_body: 'Corporals',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatments_laser: 'Làser i Tecnologia',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_botox: 'Toxina Botulínica (Botox)',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_fillers: 'Farciments d\'Àcid Hialurònic',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_threads: 'Fils Tensors',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_peeling: 'Peeling Químic Mèdic',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>facial_mesotherapy: 'Mesoteràpia Facial',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_mesotherapy: 'Mesoteràpia Corporal',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_cavitation: 'Cavitació i Radiofreqüència',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_veins: 'Eliminació de Vàries',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>body_hyperhidrosis: 'Tractaments d\'Hiperhidrosi',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_hair_removal: 'Depilació Làser de Díode',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_rejuvenation: 'Rejoveniment Cutani Làser',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_spots: 'Eliminació de Taques i Tatuatges',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>laser_acne: 'Tractament de Cicatrius d\'Acnè',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_title: 'Contacta\'ns',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_text: 'Estem ubicats al Centre Comercial de Sa Teulera. Esperem veure\'t aviat!',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_phone_label: 'Telèfon: +34 123 456 789',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_label: 'Email: info@draherraez.com',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_name_placeholder: 'Nom',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_email_placeholder: 'Correu Electrònic',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_message_placeholder: 'Missatge',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>contact_button: 'Envia Missatge',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>footer_text: '&amp;copy; 2024 IH Despatx de Medicina Estètica de la Dra. Inés Herráez Balanzat. Tots els drets reservats.'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function setLanguage(lang) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.documentElement.lang = lang;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.title = translations[lang].title;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('[data-i18n]').forEach(element =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const key = element.getAttribute('data-i18n');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (translations[lang][key]) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>element.textContent = translations[lang][key];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('[data-i18n-placeholder]').forEach(element =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const key = element.getAttribute('data-i18n-placeholder');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (translations[lang][key]) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>element.placeholder = translations[lang][key];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>currentLangSpan.textContent = lang.toUpperCase();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mobileCurrentLangSpan.textContent = lang.toUpperCase();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>localStorage.setItem('lang', lang);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize language</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const userLang = navigator.language.slice(0, 2);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const storedLang = localStorage.getItem('lang');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const defaultLang = ['es', 'en', 'de', 'ca'].includes(storedLang) ? storedLang : (['es', 'en', 'de', 'ca'].includes(userLang) ? userLang : 'es');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>setLanguage(defaultLang);</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Event listeners</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const allLangOptions = document.querySelectorAll('.lang-option, .lang-option-mobile');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>allLangOptions.forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>button.addEventListener('click', (event) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const lang = event.target.getAttribute('data-lang');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>setLanguage(lang);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>langMenu.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>mobileLangMenu.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Hide dropdowns when clicking outside</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.body.addEventListener('click', (event) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!treatmentsDropdown.contains(event.target) &amp;&amp; !treatmentsMenu.contains(event.target)) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>treatmentsMenu.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!langDropdown.contains(event.target) &amp;&amp; !langMenu.contains(event.target)) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>langMenu.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="flex flex-col min-h-screen">
+    
+    <!-- Contenedor principal de la pantalla de bienvenida -->
+    <div id="splashImage" class="image-container">
+        <img src="https://canvas.replit.com/content/uploaded/f61b21ff-30a8-4d18-a30f-30b393a44104.jpg-dcb24970-d61c-443e-a6f4-17fc551ee492" alt="">
+    </div>
+
+    <!-- Contenido principal de la página web (inicialmente oculto) -->
+    <div id="mainContent" class="website-content">
+        <!-- Navbar and Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center flex-wrap">
+                <a href="#" class="text-xl sm:text-2xl font-bold text-gold tracking-widest uppercase hover:scale-105 transition-transform" data-i18n="navbar_brand">
+                    DRA. INÉS HERRÁEZ BALANZAT
+                </a>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gold focus:outline-none p-2 rounded-md">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center space-x-6 lg:space-x-8 text-lg">
+                    <li><a href="#about" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_about">Sobre Nosotros</a></li>
+                    <li class="relative group">
+                        <button id="treatments-dropdown" class="text-gray-600 hover:text-gold hover:scale-105 transition-all flex items-center p-2" data-i18n="navbar_treatments">
+                            Tratamientos
+                            <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown content -->
+                        <div id="treatments-menu" class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded-md border border-gray-200 min-w-[200px] z-20">
+                            <a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_facials">Faciales</a>
+                            <a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_body">Corporales</a>
+                            <a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_laser">Láser y Tecnología</a>
+                        </div>
+                    </li>
+                    <li><a href="#services" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_services">Servicios</a></li>
+                    <li><a href="#booking" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_booking">Reserva Online</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-gold hover:scale-105 transition-all" data-i18n="navbar_contact">Contacto</a></li>
+                    <li class="relative group">
+                        <button id="language-dropdown" class="text-gray-600 hover:text-gold transition-all flex items-center p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M4.93 4.93l1.41 1.41m12.72 12.72l1.41 1.41M12 2v20m-5-5l10-10m-10 0l10 10m-1-16h-4m-6 0h-4m12 16h4m-6 0h-4"/></svg>
+                            <span id="current-lang" class="ml-2">ES</span>
+                            <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown content -->
+                        <div id="language-menu" class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded-md border border-gray-200 min-w-[100px] z-20">
+                            <button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="es">Español</button>
+                            <button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="en">English</button>
+                            <button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="de">Deutsch</button>
+                            <button class="lang-option block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="ca">Català</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu (initially hidden) -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="flex flex-col items-center py-4 space-y-2 text-lg">
+                    <li><a href="#about" class="block w-full text-center py-2 text-gray-600 hover:text-gold transition-all" data-i18n="navbar_about">Sobre Nosotros</a></li>
+                    <li class="w-full relative">
+                        <button id="mobile-treatments-button" class="w-full text-center py-2 text-gray-600 hover:text-gold transition-all flex items-center justify-center" data-i18n="navbar_treatments">
+                            Tratamientos
+                            <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Mobile Dropdown content -->
+                        <div id="mobile-treatments-menu" class="hidden bg-white py-2 w-full text-center">
+                            <a href="#faciales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_facials">Faciales</a>
+                            <a href="#corporales" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_body">Corporales</a>
+                            <a href="#laser" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-i18n="treatments_laser">Láser y Tecnología</a>
+                        </div>
+                    </li>
+                    <li><a href="#services" class="block w-full text-center py-2 text-gray-600 hover:text-gold transition-all" data-i18n="navbar_services">Servicios</a></li>
+                    <li><a href="#booking" class="block w-full text-center py-2 text-gray-600 hover:text-gold transition-all" data-i18n="navbar_booking">Reserva Online</a></li>
+                    <li><a href="#contact" class="block w-full text-center py-2 text-gray-600 hover:text-gold transition-all" data-i18n="navbar_contact">Contacto</a></li>
+                    <li class="relative w-full">
+                        <button id="mobile-language-button" class="w-full text-center py-2 text-gray-600 hover:text-gold transition-all flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M4.93 4.93l1.41 1.41m12.72 12.72l1.41 1.41M12 2v20m-5-5l10-10m-10 0l10 10m-1-16h-4m-6 0h-4m12 16h4m-6 0h-4"/></svg>
+                            <span id="current-lang" class="ml-2">ES</span>
+                            <svg class="ml-2 w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-language-menu" class="hidden bg-white py-2 w-full text-center">
+                            <button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="es">Español</button>
+                            <button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="en">English</button>
+                            <button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="de">Deutsch</button>
+                            <button class="lang-option-mobile block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gold transition-all" data-lang="ca">Català</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-gray-100">
+                <!-- Background Text -->
+                <div class="absolute text-gold text-hero-ih font-bold z-0 pointer-events-none">
+                    IH
+                </div>
+                
+                <!-- Hero content -->
+                <div class="text-center p-6 sm:p-8 bg-white/70 backdrop-blur-md rounded-lg shadow-xl z-10">
+                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold text-gold tracking-wider leading-tight" data-i18n="hero_title">Despacho de Medicina Estética</h1>
+                    <h2 class="text-xl sm:text-2xl md:text-4xl mt-2 md:mt-4 text-gray-700" data-i18n="hero_subtitle">Dra. Inés Herráez Balanzat</h2>
+                    <p class="mt-4 text-gray-600 text-base sm:text-lg max-w-xl mx-auto" data-i18n="hero_slogan">Implementa tu belleza natural en Sa Teulera</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="container mx-auto px-4 sm:px-6 py-16 md:py-32">
+                <div class="flex flex-col md:flex-row items-center md:space-x-16">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://canvas.replit.com/content/uploaded/IMG_7042.jpg-8d3530bb-d0fd-4976-9eeb-0e7e91ec2207" alt="" class="rounded-lg shadow-2xl w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gold mb-4 border-b-2 border-gold pb-2" data-i18n="about_title">Sobre Nosotros</h2>
+                        <p class="text-gray-700 leading-relaxed text-base sm:text-lg" data-i18n="about_text">
+                            En el despacho de la Dra. Inés Herráez Balanzat, la belleza es el resultado de un cuidado médico integral. Situados en el centro comercial de Sa Teulera, ofrecemos un entorno seguro y profesional donde médicos especializados te guiarán en tu camino hacia la mejor versión de ti mismo/a. Nos enorgullece utilizar las técnicas más avanzadas y productos de vanguardia para garantizar resultados naturales y duraderos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Treatments Section -->
+            <section id="treatments" class="bg-gray-100 py-16 md:py-32">
+                <div class="container mx-auto px-4 sm:px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-12 sm:mb-16 border-b-2 border-gold pb-2 mx-auto w-fit" data-i18n="treatments_main_title">Nuestros Tratamientos</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                        <!-- Facial Treatments -->
+                        <div id="faciales" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl hover:scale-105 transition-all">
+                            <h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_facials">Faciales</h3>
+                            <ul class="space-y-3 text-gray-700 text-base">
+                                <li data-i18n="facial_botox">Toxina Botulínica (Botox)</li>
+                                <li data-i18n="facial_fillers">Rellenos de Ácido Hialurónico</li>
+                                <li data-i18n="facial_threads">Hilos Tensores</li>
+                                <li data-i18n="facial_peeling">Peeling Químico Médico</li>
+                                <li data-i18n="facial_mesotherapy">Mesoterapia Facial</li>
+                            </ul>
+                        </div>
+                        <!-- Body Treatments -->
+                        <div id="corporales" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl hover:scale-105 transition-all">
+                            <h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_body">Corporales</h3>
+                            <ul class="space-y-3 text-gray-700 text-base">
+                                <li data-i18n="body_mesotherapy">Mesoterapia Corporal</li>
+                                <li data-i18n="body_cavitation">Cavitación y Radiofrecuencia</li>
+                                <li data-i18n="body_veins">Eliminación de Varices</li>
+                                <li data-i18n="body_hyperhidrosis">Tratamientos de Hiperhidrosis</li>
+                            </ul>
+                        </div>
+                        <!-- Laser & Technology -->
+                        <div id="laser" class="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl hover:scale-105 transition-all">
+                            <h3 class="text-2xl font-bold text-gold mb-4 border-b border-gray-200 pb-2" data-i18n="treatments_laser">Láser y Tecnología</h3>
+                            <ul class="space-y-3 text-gray-700 text-base">
+                                <li data-i18n="laser_hair_removal">Depilación Láser de Diodo</li>
+                                <li data-i18n="laser_rejuvenation">Rejuvenecimiento Cutáneo Láser</li>
+                                <li data-i18n="laser_spots">Eliminación de Manchas y Tatuajes</li>
+                                <li data-i18n="laser_acne">Tratamiento de Cicatrices de Acné</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Booking Section -->
+            <section id="booking" class="container mx-auto px-4 sm:px-6 py-16 md:py-32">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-10 sm:mb-12 border-b-2 border-gold pb-2 mx-auto w-fit" data-i18n="booking_title">Reserva tu Cita Online</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 sm:p-10 mx-auto max-w-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-bold mb-2" data-i18n="booking_name_label">Nombre completo</label>
+                            <input type="text" id="name" name="name" data-i18n-placeholder="contact_name_placeholder" placeholder="Nombre completo" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-bold mb-2" data-i18n="booking_email_label">Correo electrónico</label>
+                            <input type="email" id="email" name="email" data-i18n-placeholder="contact_email_placeholder" placeholder="Correo electrónico" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-bold mb-2" data-i18n="booking_phone_label">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" data-i18n-placeholder="booking_phone_placeholder" placeholder="Teléfono" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="treatment" class="block text-gray-700 font-bold mb-2" data-i18n="booking_treatment_label">Tratamiento de interés</label>
+                            <select id="treatment" name="treatment" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                                <option value="" data-i18n="booking_select_treatment">Selecciona un tratamiento</option>
+                                <option value="botox" data-i18n="facial_botox">Toxina Botulínica (Botox)</option>
+                                <option value="fillers" data-i18n="facial_fillers">Rellenos de Ácido Hialurónico</option>
+                                <option value="threads" data-i18n="facial_threads">Hilos Tensores</option>
+                                <option value="peeling" data-i18n="facial_peeling">Peeling Químico Médico</option>
+                                <option value="facial-meso" data-i18n="facial_mesotherapy">Mesoterapia Facial</option>
+                                <option value="body-meso" data-i18n="body_mesotherapy">Mesoterapia Corporal</option>
+                                <option value="cavitation" data-i18n="body_cavitation">Cavitación y Radiofrecuencia</option>
+                                <option value="veins" data-i18n="body_veins">Eliminación de Varices</option>
+                                <option value="hyperhidrosis" data-i18n="body_hyperhidrosis">Tratamientos de Hiperhidrosis</option>
+                                <option value="laser-removal" data-i18n="laser_hair_removal">Depilación Láser de Diodo</option>
+                                <option value="laser-rejuvenation" data-i18n="laser_rejuvenation">Rejuvenecimiento Cutáneo Láser</option>
+                                <option value="laser-spots" data-i18n="laser_spots">Eliminación de Manchas y Tatuajes</option>
+                                <option value="laser-acne" data-i18n="laser_acne">Tratamiento de Cicatrices de Acné</option>
+                                <option value="other" data-i18n="booking_other">Otro / Consulta General</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date" class="block text-gray-700 font-bold mb-2" data-i18n="booking_date_label">Fecha de cita</label>
+                            <input type="date" id="date" name="date" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="time" class="block text-gray-700 font-bold mb-2" data-i18n="booking_time_label">Hora de cita</label>
+                            <input type="time" id="time" name="time" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                        </div>
+                        <button type="submit" class="w-full bg-gold text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all" data-i18n="booking_button">Reservar Cita</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="container mx-auto px-4 sm:px-6 py-16 md:py-32">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gold mb-10 sm:mb-12 border-b-2 border-gold pb-2 mx-auto w-fit" data-i18n="contact_title">Contáctanos</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12">
+                    <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                        <p class="text-gray-700 text-base sm:text-lg mb-4" data-i18n="contact_text">
+                            Estamos ubicados en el Centro Comercial de Sa Teulera.
+                            ¡Esperamos verte pronto!
+                        </p>
+                        <p class="text-gray-700 text-base sm:text-lg font-bold" data-i18n="contact_phone_label">Teléfono: +34 123 456 789</p>
+                        <p class="text-gray-700 text-base sm:text-lg font-bold" data-i18n="contact_email_label">Email: info@draherraez.com</p>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <form class="space-y-4">
+                            <input type="text" data-i18n-placeholder="contact_name_placeholder" placeholder="Nombre" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                            <input type="email" data-i18n-placeholder="contact_email_placeholder" placeholder="Correo Electrónico" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                            <textarea data-i18n-placeholder="contact_message_placeholder" placeholder="Mensaje" rows="4" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all"></textarea>
+                            <button type="submit" class="w-full bg-gold text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all" data-i18n="contact_button">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <p data-i18n="footer_text">&copy; 2024 IH Despacho de Medicina estética de la Dra. Inés Herráez Balanzat. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const splashImage = document.getElementById('splashImage');
+            const mainContent = document.getElementById('mainContent');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const treatmentsDropdown = document.getElementById('treatments-dropdown');
+            const treatmentsMenu = document.getElementById('treatments-menu');
+            const mobileTreatmentsButton = document.getElementById('mobile-treatments-button');
+            const mobileTreatmentsMenu = document.getElementById('mobile-treatments-menu');
+            const languageDropdown = document.getElementById('language-dropdown');
+            const languageMenu = document.getElementById('language-menu');
+            const mobileLanguageButton = document.getElementById('mobile-language-button');
+            const mobileLanguageMenu = document.getElementById('mobile-language-menu');
+            const langOptions = document.querySelectorAll('.lang-option, .lang-option-mobile');
+            const currentLang = document.getElementById('current-lang');
+
+            // Fade out splash image on click
+            splashImage.addEventListener('click', () => {
+                splashImage.classList.add('fade-out');
+                mainContent.classList.add('fade-in');
+            });
+            
+            // Hide splash image after 4 seconds if not clicked
+            setTimeout(() => {
+                if (!splashImage.classList.contains('fade-out')) {
+                    splashImage.classList.add('fade-out');
+                    mainContent.classList.add('fade-in');
+                }
+            }, 4000);
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileTreatmentsMenu.classList.add('hidden'); // Hide treatments menu when main menu is toggled
+                mobileLanguageMenu.classList.add('hidden'); // Hide language menu when main menu is toggled
+            });
+
+            // Toggle desktop treatments dropdown
+            treatmentsDropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                treatmentsMenu.classList.toggle('hidden');
+            });
+
+            // Toggle mobile treatments dropdown
+            mobileTreatmentsButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileTreatmentsMenu.classList.toggle('hidden');
+            });
+
+            // Toggle desktop language dropdown
+            languageDropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                languageMenu.classList.toggle('hidden');
+            });
+
+            // Toggle mobile language dropdown
+            mobileLanguageButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileLanguageMenu.classList.toggle('hidden');
+            });
+
+            // Handle language change
+            langOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const lang = option.dataset.lang;
+                    currentLang.textContent = lang.toUpperCase();
+                    // Close dropdowns
+                    treatmentsMenu.classList.add('hidden');
+                    languageMenu.classList.add('hidden');
+                    mobileTreatmentsMenu.classList.add('hidden');
+                    mobileLanguageMenu.classList.add('hidden');
+                    mobileMenu.classList.add('hidden');
+                    
+                    updateLanguage(lang);
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.body.addEventListener('click', (event) => {
+                if (!treatmentsDropdown.contains(event.target) && !treatmentsMenu.contains(event.target)) {
+                    treatmentsMenu.classList.add('hidden');
+                }
+                if (!languageDropdown.contains(event.target) && !languageMenu.contains(event.target)) {
+                    languageMenu.classList.add('hidden');
+                }
+            });
+
+            // Language content
+            const translations = {
+                es: {
+                    navbar_brand: 'DRA. INÉS HERRÁEZ BALANZAT',
+                    navbar_about: 'Sobre Nosotros',
+                    navbar_treatments: 'Tratamientos',
+                    navbar_services: 'Servicios',
+                    navbar_booking: 'Reserva Online',
+                    navbar_contact: 'Contacto',
+                    treatments_facials: 'Faciales',
+                    treatments_body: 'Corporales',
+                    treatments_laser: 'Láser y Tecnología',
+                    hero_title: 'Despacho de Medicina Estética',
+                    hero_subtitle: 'Dra. Inés Herráez Balanzat',
+                    hero_slogan: 'Implementa tu belleza natural en Sa Teulera',
+                    about_title: 'Sobre Nosotros',
+                    about_text: 'En el despacho de la Dra. Inés Herráez Balanzat, la belleza es el resultado de un cuidado médico integral. Situados en el centro comercial de Sa Teulera, ofrecemos un entorno seguro y profesional donde médicos especializados te guiarán en tu camino hacia la mejor versión de ti mismo/a. Nos enorgullece utilizar las técnicas más avanzadas y productos de vanguardia para garantizar resultados naturales y duraderos.',
+                    treatments_main_title: 'Nuestros Tratamientos',
+                    facial_botox: 'Toxina Botulínica (Botox)',
+                    facial_fillers: 'Rellenos de Ácido Hialurónico',
+                    facial_threads: 'Hilos Tensores',
+                    facial_peeling: 'Peeling Químico Médico',
+                    facial_mesotherapy: 'Mesoterapia Facial',
+                    body_mesotherapy: 'Mesoterapia Corporal',
+                    body_cavitation: 'Cavitación y Radiofrecuencia',
+                    body_veins: 'Eliminación de Varices',
+                    body_hyperhidrosis: 'Tratamientos de Hiperhidrosis',
+                    laser_hair_removal: 'Depilación Láser de Diodo',
+                    laser_rejuvenation: 'Rejuvenecimiento Cutáneo Láser',
+                    laser_spots: 'Eliminación de Manchas y Tatuajes',
+                    laser_acne: 'Tratamiento de Cicatrices de Acné',
+                    booking_title: 'Reserva tu Cita Online',
+                    booking_name_label: 'Nombre completo',
+                    booking_email_label: 'Correo electrónico',
+                    booking_phone_label: 'Teléfono',
+                    booking_treatment_label: 'Tratamiento de interés',
+                    booking_select_treatment: 'Selecciona un tratamiento',
+                    booking_other: 'Otro / Consulta General',
+                    booking_date_label: 'Fecha de cita',
+                    booking_time_label: 'Hora de cita',
+                    booking_button: 'Reservar Cita',
+                    contact_title: 'Contáctanos',
+                    contact_text: 'Estamos ubicados en el Centro Comercial de Sa Teulera. ¡Esperamos verte pronto!',
+                    contact_phone_label: 'Teléfono: +34 123 456 789',
+                    contact_email_label: 'Email: info@draherraez.com',
+                    contact_name_placeholder: 'Nombre',
+                    contact_email_placeholder: 'Correo Electrónico',
+                    contact_message_placeholder: 'Mensaje',
+                    contact_button: 'Enviar Mensaje',
+                    footer_text: '© 2024 IH Despacho de Medicina estética de la Dra. Inés Herráez Balanzat. Todos los derechos reservados.'
+                },
+                en: {
+                    navbar_brand: 'DR. INÉS HERRÁEZ BALANZAT',
+                    navbar_about: 'About Us',
+                    navbar_treatments: 'Treatments',
+                    navbar_services: 'Services',
+                    navbar_booking: 'Book Online',
+                    navbar_contact: 'Contact',
+                    treatments_facials: 'Facial Treatments',
+                    treatments_body: 'Body Treatments',
+                    treatments_laser: 'Laser & Technology',
+                    hero_title: 'Aesthetic Medicine Office',
+                    hero_subtitle: 'Dr. Inés Herráez Balanzat',
+                    hero_slogan: 'Enhance your natural beauty in Sa Teulera',
+                    about_title: 'About Us',
+                    about_text: 'At the office of Dr. Inés Herráez Balanzat, beauty is the result of comprehensive medical care. Located in the Sa Teulera shopping center, we offer a safe and professional environment where specialized doctors will guide you on your journey to the best version of yourself. We are proud to use the most advanced techniques and cutting-edge products to ensure natural and long-lasting results.',
+                    treatments_main_title: 'Our Treatments',
+                    facial_botox: 'Botulinum Toxin (Botox)',
+                    facial_fillers: 'Hyaluronic Acid Fillers',
+                    facial_threads: 'Thread Lifts',
+                    facial_peeling: 'Medical Chemical Peeling',
+                    facial_mesotherapy: 'Facial Mesotherapy',
+                    body_mesotherapy: 'Body Mesotherapy',
+                    body_cavitation: 'Cavitation and Radiofrequency',
+                    body_veins: 'Vein Removal',
+                    body_hyperhidrosis: 'Hyperhidrosis Treatments',
+                    laser_hair_removal: 'Diode Laser Hair Removal',
+                    laser_rejuvenation: 'Laser Skin Rejuvenation',
+                    laser_spots: 'Removal of Spots and Tattoos',
+                    laser_acne: 'Acne Scar Treatment',
+                    booking_title: 'Book Your Appointment Online',
+                    booking_name_label: 'Full Name',
+                    booking_email_label: 'Email',
+                    booking_phone_label: 'Phone',
+                    booking_treatment_label: 'Treatment of interest',
+                    booking_select_treatment: 'Select a treatment',
+                    booking_other: 'Other / General Inquiry',
+                    booking_date_label: 'Appointment Date',
+                    booking_time_label: 'Appointment Time',
+                    booking_button: 'Book Appointment',
+                    contact_title: 'Contact Us',
+                    contact_text: 'We are located in the Sa Teulera Shopping Center. We look forward to seeing you soon!',
+                    contact_phone_label: 'Phone: +34 123 456 789',
+                    contact_email_label: 'Email: info@draherraez.com',
+                    contact_name_placeholder: 'Name',
+                    contact_email_placeholder: 'Email',
+                    contact_message_placeholder: 'Message',
+                    contact_button: 'Send Message',
+                    footer_text: '© 2024 IH Dr. Inés Herráez Balanzat Aesthetic Medicine Office. All rights reserved.'
+                },
+                de: {
+                    navbar_brand: 'DR. INÉS HERRÁEZ BALANZAT',
+                    navbar_about: 'Über uns',
+                    navbar_treatments: 'Behandlungen',
+                    navbar_services: 'Dienstleistungen',
+                    navbar_booking: 'Online-Buchung',
+                    navbar_contact: 'Kontakt',
+                    treatments_facials: 'Gesichtsbehandlungen',
+                    treatments_body: 'Körperbehandlungen',
+                    treatments_laser: 'Laser & Technologie',
+                    hero_title: 'Praxis für Ästhetische Medizin',
+                    hero_subtitle: 'Dra. Inés Herráez Balanzat',
+                    hero_slogan: 'Verwirkliche deine natürliche Schönheit in Sa Teulera',
+                    about_title: 'Über uns',
+                    about_text: 'In der Praxis von Dr. Inés Herráez Balanzat, ist Schönheit das Ergebnis einer umfassenden medizinischen Versorgung. Im Einkaufszentrum Sa Teulera gelegen, bieten wir eine sichere und professionelle Umgebung, in der Sie von spezialisierten Ärzten auf dem Weg zur besten Version Ihrer selbst begleitet werden. Wir sind stolz darauf, die fortschrittlichsten Techniken und modernste Produkte einzusetzen, um natürliche und langanhaltende Ergebnisse zu gewährleisten.',
+                    treatments_main_title: 'Unsere Behandlungen',
+                    facial_botox: 'Botulinumtoxin (Botox)',
+                    facial_fillers: 'Hyaluronsäure-Filler',
+                    facial_threads: 'Fadenlifting',
+                    facial_peeling: 'Medizinisches Chemisches Peeling',
+                    facial_mesotherapy: 'Gesichts-Mesotherapie',
+                    body_mesotherapy: 'Körper-Mesotherapie',
+                    body_cavitation: 'Kavitation und Radiofrequenz',
+                    body_veins: 'Entfernung von Krampfadern',
+                    body_hyperhidrosis: 'Hyperhidrose-Behandlungen',
+                    laser_hair_removal: 'Diodenlaser-Haarentfernung',
+                    laser_rejuvenation: 'Laser-Hautverjüngung',
+                    laser_spots: 'Entfernung von Flecken und Tattoos',
+                    laser_acne: 'Behandlung von Aknenarben',
+                    booking_title: 'Buchen Sie Ihren Termin online',
+                    booking_name_label: 'Vollständiger Name',
+                    booking_email_label: 'E-Mail-Adresse',
+                    booking_phone_label: 'Telefon',
+                    booking_treatment_label: 'Interessierte Behandlung',
+                    booking_select_treatment: 'Wählen Sie eine Behandlung',
+                    booking_other: 'Andere / Allgemeine Anfrage',
+                    booking_date_label: 'Termindatum',
+                    booking_time_label: 'Terminzeit',
+                    booking_button: 'Termin buchen',
+                    contact_title: 'Kontakt',
+                    contact_text: 'Sie finden uns im Einkaufszentrum Sa Teulera. Wir freuen uns darauf, Sie bald zu sehen!',
+                    contact_phone_label: 'Telefon: +34 123 456 789',
+                    contact_email_label: 'E-Mail: info@draherraez.com',
+                    contact_name_placeholder: 'Name',
+                    contact_email_placeholder: 'E-Mail',
+                    contact_message_placeholder: 'Nachricht',
+                    contact_button: 'Nachricht senden',
+                    footer_text: '© 2024 IH Praxis für Ästhetische Medizin von Dr. Inés Herráez Balanzat. Alle Rechte vorbehalten.'
+                },
+                ca: {
+                    navbar_brand: 'DRA. INÉS HERRÁEZ BALANZAT',
+                    navbar_about: 'Sobre Nosaltres',
+                    navbar_treatments: 'Tractaments',
+                    navbar_services: 'Serveis',
+                    navbar_booking: 'Reserva Online',
+                    navbar_contact: 'Contacte',
+                    treatments_facials: 'Facials',
+                    treatments_body: 'Corporals',
+                    treatments_laser: 'Làser i Tecnologia',
+                    hero_title: 'Despatx de Medicina Estètica',
+                    hero_subtitle: 'Dra. Inés Herráez Balanzat',
+                    hero_slogan: 'Implementa la teva bellesa natural a Sa Teulera',
+                    about_title: 'Sobre Nosaltres',
+                    about_text: 'Al despatx de la Dra. Inés Herráez Balanzat, la bellesa és el resultat d\'una cura mèdica integral. Situats al centre comercial de Sa Teulera, oferim un entorn segur i professional on metges especialitzats et guiaran en el teu camí cap a la millor versió de tu mateix/a. Ens enorgulleix utilitzar les tècniques més avançades i productes d\'avantguarda per garantir resultats naturals i duradors.',
+                    treatments_main_title: 'Els nostres Tractaments',
+                    facial_botox: 'Toxina Botulínica (Botox)',
+                    facial_fillers: 'Farciments d\'Àcid Hialurònic',
+                    facial_threads: 'Fils Tensors',
+                    facial_peeling: 'Peeling Químic Mèdic',
+                    facial_mesotherapy: 'Mesoteràpia Facial',
+                    body_mesotherapy: 'Mesoteràpia Corporal',
+                    body_cavitation: 'Cavitació i Radiofreqüència',
+                    body_veins: 'Eliminació de Vàrices',
+                    body_hyperhidrosis: 'Tractaments d\'Hiperhidrosi',
+                    laser_hair_removal: 'Depilació Làser de Diodo',
+                    laser_rejuvenation: 'Rejoveniment Cutani Làser',
+                    laser_spots: 'Eliminació de Taques i Tatuatges',
+                    laser_acne: 'Tractament de Cicatrius d\'Acné',
+                    booking_title: 'Reserva la teva Cita Online',
+                    booking_name_label: 'Nom complet',
+                    booking_email_label: 'Correu electrònic',
+                    booking_phone_label: 'Telèfon',
+                    booking_treatment_label: 'Tractament d\'interès',
+                    booking_select_treatment: 'Selecciona un tractament',
+                    booking_other: 'Altres / Consulta General',
+                    booking_date_label: 'Data de cita',
+                    booking_time_label: 'Hora de cita',
+                    booking_button: 'Reservar Cita',
+                    contact_title: 'Contacta\'ns',
+                    contact_text: 'Estem ubicats al Centre Comercial de Sa Teulera. Esperem veure\'t aviat!',
+                    contact_phone_label: 'Telèfon: +34 123 456 789',
+                    contact_email_label: 'Email: info@draherraez.com',
+                    contact_name_placeholder: 'Nom',
+                    contact_email_placeholder: 'Correu electrònic',
+                    contact_message_placeholder: 'Missatge',
+                    contact_button: 'Enviar Missatge',
+                    footer_text: '© 2024 IH Despatx de Medicina estètica de la Dra. Inés Herráez Balanzat. Tots els drets reservats.'
+                }
+            };
+            
+            function updateLanguage(lang) {
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.dataset.i18n;
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+                placeholders.forEach(el => {
+                    const key = el.dataset.i18n-placeholder;
+                    if (translations[lang] && translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
